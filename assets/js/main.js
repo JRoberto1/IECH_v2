@@ -46,41 +46,72 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  /* --- Marcar link ativo na Navbar --- */
+  var currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  if (currentPage === '') currentPage = 'index.html';
+
+  /* Links normais (.nav-link) */
+  document.querySelectorAll('.nav-link').forEach(function (link) {
+    var href = link.getAttribute('href');
+    if (href === currentPage) {
+      link.classList.add('active');
+      link.style.color = '#C8A84B';
+    }
+  });
+
+  /* Botão Inscreva-se: destacar quando em inscricao.html */
+  if (currentPage === 'inscricao.html') {
+    var inscricaoBtns = document.querySelectorAll('.btn-inscricao-ativo');
+    inscricaoBtns.forEach(function (btn) {
+      btn.style.backgroundColor = '#E8C96A';
+      btn.style.boxShadow = '0 0 0 3px rgba(200,168,75,0.4)';
+    });
+  }
+
   /* --- Busca na página de Downloads --- */
-  const searchInput = document.getElementById('search-downloads');
+  var searchInput = document.getElementById('search-downloads');
   if (searchInput) {
     searchInput.addEventListener('input', function () {
-      const query = this.value.toLowerCase().trim();
-      const items = document.querySelectorAll('.download-item');
+      var query = this.value.toLowerCase().trim();
+      var items = document.querySelectorAll('.download-item');
       items.forEach(function (item) {
-        const text = item.textContent.toLowerCase();
-        if (text.includes(query)) {
-          item.style.display = '';
-        } else {
-          item.style.display = 'none';
-        }
+        var text = item.textContent.toLowerCase();
+        item.style.display = text.includes(query) ? '' : 'none';
       });
 
       /* Mostrar/ocultar seções vazias */
       document.querySelectorAll('.download-section').forEach(function (section) {
-        const visibleItems = section.querySelectorAll('.download-item:not([style*="display: none"])');
-        if (visibleItems.length === 0) {
-          section.style.display = 'none';
-        } else {
-          section.style.display = '';
-        }
+        var visibleItems = section.querySelectorAll('.download-item:not([style*="display: none"])');
+        section.style.display = visibleItems.length === 0 ? 'none' : '';
       });
     });
   }
 
   /* --- Formulário de Inscrição --- */
-  const form = document.getElementById('inscricao-form');
+  var form = document.getElementById('inscricao-form');
   if (form) {
+
+    /* Auto-preencher campo oculto "turno" conforme modalidade */
+    var modalidadeSelect = document.getElementById('modalidade');
+    var turnoHidden = document.getElementById('turno');
+    if (modalidadeSelect && turnoHidden) {
+      function atualizarTurno() {
+        var val = modalidadeSelect.value;
+        if (val.indexOf('Noite') !== -1) {
+          turnoHidden.value = 'Noite';
+        } else {
+          turnoHidden.value = 'Manhã';
+        }
+      }
+      modalidadeSelect.addEventListener('change', atualizarTurno);
+      atualizarTurno(); /* inicializar */
+    }
+
     /* Máscara CPF */
-    const cpfInput = document.getElementById('cpf');
+    var cpfInput = document.getElementById('cpf');
     if (cpfInput) {
       cpfInput.addEventListener('input', function () {
-        let v = this.value.replace(/\D/g, '');
+        var v = this.value.replace(/\D/g, '');
         if (v.length > 11) v = v.slice(0, 11);
         if (v.length > 9) {
           v = v.replace(/(\d{3})(\d{3})(\d{3})(\d{1,2})/, '$1.$2.$3-$4');
@@ -94,10 +125,10 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     /* Máscara Telefone */
-    const telInput = document.getElementById('telefone');
+    var telInput = document.getElementById('telefone');
     if (telInput) {
       telInput.addEventListener('input', function () {
-        let v = this.value.replace(/\D/g, '');
+        var v = this.value.replace(/\D/g, '');
         if (v.length > 11) v = v.slice(0, 11);
         if (v.length > 6) {
           v = v.replace(/(\d{2})(\d{5})(\d{1,4})/, '($1) $2-$3');
@@ -108,13 +139,10 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     }
 
-    /* Envio via FormSpree */
+    /* Validação antes do envio nativo FormSpree */
     form.addEventListener('submit', function (e) {
-      e.preventDefault();
-
-      /* Validação básica */
-      const requiredFields = form.querySelectorAll('[required]');
-      let valid = true;
+      var requiredFields = form.querySelectorAll('[required]');
+      var valid = true;
       requiredFields.forEach(function (field) {
         if (!field.value.trim()) {
           field.classList.add('border-red-500');
@@ -123,46 +151,10 @@ document.addEventListener('DOMContentLoaded', function () {
           field.classList.remove('border-red-500');
         }
       });
-
       if (!valid) {
-        return;
+        e.preventDefault();
       }
-
-      const formData = new FormData(form);
-      const submitBtn = form.querySelector('button[type="submit"]');
-      const originalText = submitBtn.textContent;
-      submitBtn.textContent = 'Enviando...';
-      submitBtn.disabled = true;
-
-      fetch(form.action, {
-        method: 'POST',
-        body: formData,
-        headers: { 'Accept': 'application/json' }
-      })
-        .then(function (response) {
-          if (response.ok) {
-            document.getElementById('form-container').innerHTML = '<div class="success-message"><svg class="mx-auto mb-4" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#C8A84B" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><h3 class="text-2xl font-bold mb-2" style="font-family: Playfair Display, serif;">Inscrição Enviada!</h3><p class="text-gray-300">Sua inscrição foi recebida com sucesso. Entraremos em contato em breve.</p><p class="text-gray-400 text-sm mt-4">100% gratuito — sem cobranças de qualquer tipo.</p></div>';
-          } else {
-            submitBtn.textContent = originalText;
-            submitBtn.disabled = false;
-            alert('Erro ao enviar. Tente novamente.');
-          }
-        })
-        .catch(function () {
-          submitBtn.textContent = originalText;
-          submitBtn.disabled = false;
-          alert('Erro de conexão. Verifique sua internet e tente novamente.');
-        });
     });
   }
-
-  /* --- Marcar link ativo na Navbar --- */
-  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('.nav-link').forEach(function (link) {
-    const href = link.getAttribute('href');
-    if (href === currentPage) {
-      link.classList.add('active');
-    }
-  });
 
 });

@@ -41,6 +41,7 @@
       <div class="flex items-center justify-between h-16 lg:h-20">
         <a href="index.html" class="flex items-center"><img src="assets/images/logo.png" alt="IECH" class="h-10 lg:h-12"></a>
         <div class="hidden lg:flex items-center space-x-6">
+          <a href="index.html" class="nav-link text-white text-sm font-medium hover:text-dourado">Início</a>
           <a href="sobre.html" class="nav-link text-white text-sm font-medium hover:text-dourado">Sobre</a>
           <a href="cursos.html" class="nav-link text-white text-sm font-medium hover:text-dourado">Cursos</a>
           <a href="modalidades.html" class="nav-link text-white text-sm font-medium hover:text-dourado">Modalidades</a>
@@ -55,13 +56,14 @@
     </div>
     <div id="mobile-menu" class="mobile-menu lg:hidden bg-azul-escuro border-t border-white/10">
       <div class="px-4 py-4 space-y-3">
+        <a href="index.html" class="block text-white font-medium hover:text-dourado">Início</a>
         <a href="sobre.html" class="block text-white font-medium hover:text-dourado">Sobre</a>
         <a href="cursos.html" class="block text-white font-medium hover:text-dourado">Cursos</a>
         <a href="modalidades.html" class="block text-white font-medium hover:text-dourado">Modalidades</a>
         <a href="professores.html" class="block text-white font-medium hover:text-dourado">Professores</a>
         <a href="downloads.html" class="block text-white font-medium hover:text-dourado">Downloads</a>
         <a href="https://institutoech.com.br/webmail" target="_blank" rel="noopener noreferrer" class="block text-white/70 font-medium hover:text-white">Webmail</a>
-        <a href="inscricao.html" class="btn-dourado text-center block text-sm">Inscreva-se</a>
+        <a href="inscricao.html" class="btn-dourado btn-inscricao-ativo text-center block text-sm">Inscreva-se</a>
       </div>
     </div>
   </nav>
@@ -87,24 +89,17 @@
             <!-- Seção: Modalidade de Estudo -->
             <div>
               <h3 class="form-section-title">Modalidade de Estudo</h3>
-              <div class="grid sm:grid-cols-2 gap-5">
-                <div>
-                  <label for="modalidade" class="form-label">Modelo de Aula *</label>
-                  <select id="modalidade" name="modalidade" required class="form-input">
-                    <option value="">Selecione...</option>
-                    <option value="Presencial — Betim/MG">Presencial — Betim/MG</option>
-                    <option value="Online ao Vivo — Manhã (08h00–11h40)">Online ao Vivo — Manhã (08h00–11h40)</option>
-                    <option value="Online ao Vivo — Noite (19h30–21h30)">Online ao Vivo — Noite (19h30–21h30)</option>
-                  </select>
-                </div>
-                <div>
-                  <label for="turno" class="form-label">Turno *</label>
-                  <select id="turno" name="turno" required class="form-input">
-                    <option value="">Selecione...</option>
-                    <option value="Manhã">Manhã</option>
-                    <option value="Noite">Noite</option>
-                  </select>
-                </div>
+              <!-- Campo oculto: turno preenchido automaticamente via JS conforme modalidade -->
+              <input type="hidden" name="_next" value="https://jroberto1.github.io/IECH_v2/index.html">
+              <input type="hidden" name="turno" id="turno" value="Manhã">
+              <div>
+                <label for="modalidade" class="form-label">Modelo de Aula *</label>
+                <select id="modalidade" name="modalidade" required class="form-input">
+                  <option value="">Selecione...</option>
+                  <option value="Presencial — Betim/MG">Presencial — Betim/MG</option>
+                  <option value="Online ao Vivo — Manhã (08h00–11h40)">Online ao Vivo — Manhã (08h00–11h40)</option>
+                  <option value="Online ao Vivo — Noite (19h30–21h30)">Online ao Vivo — Noite (19h30–21h30)</option>
+                </select>
               </div>
             </div>
 
