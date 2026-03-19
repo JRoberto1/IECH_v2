@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscrição Gratuita — IECH | Curso de Teologia Bíblica</title>
+  <meta name="description" content="Inscreva-se gratuitamente no curso de Teologia Bíblica do IECH. Presencial em Betim/MG ou online ao vivo. Sem taxas, sem mensalidades.">
+  <meta property="og:title" content="Inscrição Gratuita — IECH">
+  <meta property="og:description" content="Inscreva-se no curso de Teologia Bíblica. 100% gratuito.">
+  <meta property="og:type" content="website">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'azul-escuro': '#0C2D6B',
+            'azul-medio': '#1A4A9C',
+            'azul-noite': '#081437',
+            'dourado': '#C8A84B',
+            'dourado-claro': '#E8C96A',
+            'ciano': '#1B8FA8',
+            'ciano-claro': '#E8F6FA',
+            'cinza-claro': '#F8F9FF',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav id="navbar" class="navbar fixed top-0 w-full z-50 bg-azul-escuro">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 lg:h-20">
+        <a href="index.html" class="flex items-center"><img src="assets/images/logo.png" alt="IECH" class="h-10 lg:h-12"></a>
+        <div class="hidden lg:flex items-center space-x-6">
+          <a href="sobre.html" class="nav-link text-white text-sm font-medium hover:text-dourado">Sobre</a>
+          <a href="cursos.html" class="nav-link text-white text-sm font-medium hover:text-dourado">Cursos</a>
+          <a href="modalidades.html" class="nav-link text-white text-sm font-medium hover:text-dourado">Modalidades</a>
+          <a href="professores.html" class="nav-link text-white text-sm font-medium hover:text-dourado">Professores</a>
+          <a href="downloads.html" class="nav-link text-white text-sm font-medium hover:text-dourado">Downloads</a>
+          <span class="text-white/30">|</span>
+          <a href="https://institutoech.com.br/webmail" target="_blank" rel="noopener noreferrer" class="text-white/70 text-sm font-medium hover:text-white transition-colors">Webmail</a>
+          <a href="inscricao.html" class="btn-dourado text-sm !py-2 !px-5">Inscreva-se</a>
+        </div>
+        <button id="menu-btn" class="lg:hidden text-white" aria-label="Abrir menu"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="mobile-menu lg:hidden bg-azul-escuro border-t border-white/10">
+      <div class="px-4 py-4 space-y-3">
+        <a href="sobre.html" class="block text-white font-medium hover:text-dourado">Sobre</a>
+        <a href="cursos.html" class="block text-white font-medium hover:text-dourado">Cursos</a>
+        <a href="modalidades.html" class="block text-white font-medium hover:text-dourado">Modalidades</a>
+        <a href="professores.html" class="block text-white font-medium hover:text-dourado">Professores</a>
+        <a href="downloads.html" class="block text-white font-medium hover:text-dourado">Downloads</a>
+        <a href="https://institutoech.com.br/webmail" target="_blank" rel="noopener noreferrer" class="block text-white/70 font-medium hover:text-white">Webmail</a>
+        <a href="inscricao.html" class="btn-dourado text-center block text-sm">Inscreva-se</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ========== PAGE HERO ========== -->
+    <section class="page-hero">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <span class="pill mb-4" data-aos="fade-down">100% Gratuito</span>
+        <h1 class="mt-3" data-aos="fade-up">Inscrição</h1>
+        <div class="gold-line" data-aos="fade-up" data-aos-delay="100"></div>
+        <p class="text-gray-300 mt-4 max-w-xl mx-auto" data-aos="fade-up" data-aos-delay="150">Preencha o formulário abaixo para iniciar sua formação em Teologia Bíblica. Sem taxas, sem mensalidades.</p>
+      </div>
+    </section>
+
+    <!-- ========== FORMULÁRIO ========== -->
+    <section class="py-16 section-alt">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div id="form-container" data-aos="fade-up">
+          <form id="inscricao-form" action="https://formspree.io/f/mqeynbzy" method="POST" class="bg-white rounded-xl p-8 border border-gray-100 space-y-8">
+
+            <!-- Seção: Modalidade de Estudo -->
+            <div>
+              <h3 class="form-section-title">Modalidade de Estudo</h3>
+              <div class="grid sm:grid-cols-2 gap-5">
+                <div>
+                  <label for="modalidade" class="form-label">Modelo de Aula *</label>
+                  <select id="modalidade" name="modalidade" required class="form-input">
+                    <option value="">Selecione...</option>
+                    <option value="Presencial — Betim/MG">Presencial — Betim/MG</option>
+                    <option value="Online ao Vivo — Manhã (08h00–11h40)">Online ao Vivo — Manhã (08h00–11h40)</option>
+                    <option value="Online ao Vivo — Noite (19h30–21h30)">Online ao Vivo — Noite (19h30–21h30)</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="turno" class="form-label">Turno *</label>
+                  <select id="turno" name="turno" required class="form-input">
+                    <option value="">Selecione...</option>
+                    <option value="Manhã">Manhã</option>
+                    <option value="Noite">Noite</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!-- Seção: Dados Pessoais -->
+            <div>
+              <h3 class="form-section-title">Dados Pessoais</h3>
+              <div class="space-y-5">
+                <div>
+                  <label for="nome" class="form-label">Nome Completo *</label>
+                  <input type="text" id="nome" name="nome" required class="form-input" placeholder="Seu nome completo">
+                </div>
+                <div class="grid sm:grid-cols-2 gap-5">
+                  <div>
+                    <label for="sexo" class="form-label">Sexo *</label>
+                    <select id="sexo" name="sexo" required class="form-input">
+                      <option value="">Selecione...</option>
+                      <option value="Masculino">Masculino</option>
+                      <option value="Feminino">Feminino</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label for="nascimento" class="form-label">Data de Nascimento *</label>
+                    <input type="date" id="nascimento" name="nascimento" required class="form-input">
+                  </div>
+                </div>
+                <div class="grid sm:grid-cols-2 gap-5">
+                  <div>
+                    <label for="cpf" class="form-label">CPF *</label>
+                    <input type="text" id="cpf" name="cpf" required class="form-input" placeholder="000.000.000-00" maxlength="14">
+                  </div>
+                  <div>
+                    <label for="rg" class="form-label">RG (Identidade)</label>
+                    <input type="text" id="rg" name="rg" class="form-input" placeholder="Número do RG">
+                  </div>
+                </div>
+                <div>
+                  <label for="estado_civil" class="form-label">Estado Civil *</label>
+                  <select id="estado_civil" name="estado_civil" required class="form-input">
+                    <option value="">Selecione...</option>
+                    <option value="Solteiro(a)">Solteiro(a)</option>
+                    <option value="Casado(a)">Casado(a)</option>
+                    <option value="Divorciado(a)">Divorciado(a)</option>
+                    <option value="Viúvo(a)">Viúvo(a)</option>
+                    <option value="União Estável">União Estável</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!-- Seção: Contato -->
+            <div>
+              <h3 class="form-section-title">Contato</h3>
+              <div class="grid sm:grid-cols-2 gap-5">
+                <div>
+                  <label for="telefone" class="form-label">Telefone (WhatsApp) *</label>
+                  <input type="tel" id="telefone" name="telefone" required class="form-input" placeholder="(31) 99999-0000">
+                </div>
+                <div>
+                  <label for="email" class="form-label">E-mail *</label>
+                  <input type="email" id="email" name="email" required class="form-input" placeholder="seu@email.com">
+                </div>
+              </div>
+            </div>
+
+            <!-- Seção: Endereço -->
+            <div>
+              <h3 class="form-section-title">Endereço</h3>
+              <div class="space-y-5">
+                <div>
+                  <label for="endereco" class="form-label">Endereço *</label>
+                  <input type="text" id="endereco" name="endereco" required class="form-input" placeholder="Rua, número, complemento">
+                </div>
+                <div class="grid sm:grid-cols-2 gap-5">
+                  <div>
+                    <label for="bairro" class="form-label">Bairro *</label>
+                    <input type="text" id="bairro" name="bairro" required class="form-input" placeholder="Bairro">
+                  </div>
+                  <div>
+                    <label for="cidade" class="form-label">Cidade *</label>
+                    <input type="text" id="cidade" name="cidade" required class="form-input" placeholder="Cidade">
+                  </div>
+                </div>
+                <div>
+                  <label for="estado_endereco" class="form-label">Estado *</label>
+                  <select id="estado_endereco" name="estado_endereco" required class="form-input">
+                    <option value="">Selecione...</option>
+                    <option value="AC">Acre (AC)</option>
+                    <option value="AL">Alagoas (AL)</option>
+                    <option value="AP">Amapá (AP)</option>
+                    <option value="AM">Amazonas (AM)</option>
+                    <option value="BA">Bahia (BA)</option>
+                    <option value="CE">Ceará (CE)</option>
+                    <option value="DF">Distrito Federal (DF)</option>
+                    <option value="ES">Espírito Santo (ES)</option>
+                    <option value="GO">Goiás (GO)</option>
+                    <option value="MA">Maranhão (MA)</option>
+                    <option value="MT">Mato Grosso (MT)</option>
+                    <option value="MS">Mato Grosso do Sul (MS)</option>
+                    <option value="MG">Minas Gerais (MG)</option>
+                    <option value="PA">Pará (PA)</option>
+                    <option value="PB">Paraíba (PB)</option>
+                    <option value="PR">Paraná (PR)</option>
+                    <option value="PE">Pernambuco (PE)</option>
+                    <option value="PI">Piauí (PI)</option>
+                    <option value="RJ">Rio de Janeiro (RJ)</option>
+                    <option value="RN">Rio Grande do Norte (RN)</option>
+                    <option value="RS">Rio Grande do Sul (RS)</option>
+                    <option value="RO">Rondônia (RO)</option>
+                    <option value="RR">Roraima (RR)</option>
+                    <option value="SC">Santa Catarina (SC)</option>
+                    <option value="SP">São Paulo (SP)</option>
+                    <option value="SE">Sergipe (SE)</option>
+                    <option value="TO">Tocantins (TO)</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!-- Seção: Formação e Profissão -->
+            <div>
+              <h3 class="form-section-title">Formação e Profissão</h3>
+              <div class="grid sm:grid-cols-2 gap-5">
+                <div>
+                  <label for="escolaridade" class="form-label">Escolaridade *</label>
+                  <select id="escolaridade" name="escolaridade" required class="form-input">
+                    <option value="">Selecione...</option>
+                    <option value="Ensino Fundamental Incompleto">Ensino Fundamental Incompleto</option>
+                    <option value="Ensino Fundamental Completo">Ensino Fundamental Completo</option>
+                    <option value="Ensino Médio Incompleto">Ensino Médio Incompleto</option>
+                    <option value="Ensino Médio Completo">Ensino Médio Completo</option>
+                    <option value="Ensino Superior Incompleto">Ensino Superior Incompleto</option>
+                    <option value="Ensino Superior Completo">Ensino Superior Completo</option>
+                    <option value="Pós-Graduação">Pós-Graduação</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="profissao" class="form-label">Profissão</label>
+                  <input type="text" id="profissao" name="profissao" class="form-input" placeholder="Sua profissão">
+                </div>
+              </div>
+            </div>
+
+            <!-- Seção: Vida Ministerial -->
+            <div>
+              <h3 class="form-section-title">Vida Ministerial</h3>
+              <div class="space-y-5">
+                <div class="grid sm:grid-cols-2 gap-5">
+                  <div>
+                    <label for="congregacao" class="form-label">Nome da Congregação / Igreja</label>
+                    <input type="text" id="congregacao" name="congregacao" class="form-input" placeholder="Nome da congregação">
+                  </div>
+                  <div>
+                    <label for="bairro_congrega" class="form-label">Bairro onde Congrega</label>
+                    <input type="text" id="bairro_congrega" name="bairro_congrega" class="form-input" placeholder="Bairro">
+                  </div>
+                </div>
+                <div class="grid sm:grid-cols-2 gap-5">
+                  <div>
+                    <label for="batizado" class="form-label">É Batizado(a)? *</label>
+                    <select id="batizado" name="batizado" required class="form-input">
+                      <option value="">Selecione...</option>
+                      <option value="Sim">Sim</option>
+                      <option value="Não">Não</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label for="como_soube" class="form-label">Como ficou sabendo do curso? *</label>
+                    <select id="como_soube" name="como_soube" required class="form-input">
+                      <option value="">Selecione...</option>
+                      <option value="Indicação de membro">Indicação de membro</option>
+                      <option value="Redes sociais">Redes sociais</option>
+                      <option value="Indicação do pastor ou líder">Indicação do pastor ou líder</option>
+                      <option value="Site do IECH">Site do IECH</option>
+                      <option value="Grupo de WhatsApp">Grupo de WhatsApp</option>
+                      <option value="Outro">Outro</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Seção: Motivação -->
+            <div>
+              <h3 class="form-section-title">Motivação</h3>
+              <div>
+                <label for="motivacao" class="form-label">Por que você decidiu se inscrever no IECH? *</label>
+                <textarea id="motivacao" name="motivacao" required rows="5" class="form-input resize-none" placeholder="Conte um pouco sobre sua motivação para ingressar no IECH..."></textarea>
+              </div>
+            </div>
+
+            <!-- Botão e Aviso -->
+            <div class="pt-2">
+              <button type="submit" class="btn-dourado w-full text-center text-lg py-4">
+                Enviar Inscrição Gratuitamente
+              </button>
+              <p class="text-gray-400 text-xs text-center mt-4">
+                Ao enviar, você concorda que suas informações serão utilizadas exclusivamente pelo IECH para fins de matrícula. Não há cobrança de qualquer tipo.
+              </p>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="bg-azul-noite border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid md:grid-cols-3 gap-10">
+        <div>
+          <img src="assets/images/logo.png" alt="IECH" class="h-10 mb-4">
+          <p class="text-gray-400 text-sm leading-relaxed">Instituto Evangelístico Charley Huffman — formando seminaristas para o ministério com educação teológica gratuita e de qualidade desde 2010.</p>
+          <div class="mt-4 space-y-1">
+            <p class="text-gray-400 text-sm"><svg class="inline w-4 h-4 mr-1 text-dourado" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>institutoech@gmail.com</p>
+            <p class="text-gray-400 text-sm"><svg class="inline w-4 h-4 mr-1 text-dourado" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>(31) 4127-3345</p>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4" style="font-family: Inter, sans-serif;">Páginas</h4>
+          <ul class="space-y-2">
+            <li><a href="sobre.html" class="text-gray-400 text-sm hover:text-dourado">Sobre o IECH</a></li>
+            <li><a href="cursos.html" class="text-gray-400 text-sm hover:text-dourado">Cursos</a></li>
+            <li><a href="modalidades.html" class="text-gray-400 text-sm hover:text-dourado">Modalidades</a></li>
+            <li><a href="professores.html" class="text-gray-400 text-sm hover:text-dourado">Professores</a></li>
+            <li><a href="downloads.html" class="text-gray-400 text-sm hover:text-dourado">Downloads</a></li>
+            <li><a href="inscricao.html" class="text-gray-400 text-sm hover:text-dourado">Inscrição</a></li>
+            <li><a href="https://institutoech.com.br/webmail" target="_blank" rel="noopener noreferrer" class="text-gray-400 text-sm hover:text-dourado">Webmail</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4" style="font-family: Inter, sans-serif;">Localização e Horários</h4>
+          <div class="space-y-3">
+            <p class="text-gray-400 text-sm"><svg class="inline w-4 h-4 mr-1 text-dourado" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>Rua Joaquim Bonifácio, 816 · Jd. Alterosa · Betim/MG</p>
+            <p class="text-gray-400 text-sm"><svg class="inline w-4 h-4 mr-1 text-dourado" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Online ao vivo — Manhã: Seg a Sex · 08h00–11h40</p>
+            <p class="text-gray-400 text-sm"><svg class="inline w-4 h-4 mr-1 text-dourado" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Online ao vivo — Noite: Seg a Sex · 19h30–21h30</p>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-white/10 mt-10 pt-6 text-center">
+        <p class="text-gray-500 text-sm">© 2025 Instituto Evangelístico Charley Huffman — IECH. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

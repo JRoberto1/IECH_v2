@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modalidades de Aula — IECH | Presencial e Online ao Vivo</title>
+  <meta name="description" content="Conheça as modalidades do IECH: presencial em Betim/MG ou online ao vivo. Mesma aula híbrida, mesmo professor, em tempo real.">
+  <meta property="og:title" content="Modalidades de Aula — IECH">
+  <meta property="og:description" content="Presencial ou online ao vivo. Mesma aula híbrida, em tempo real.">
+  <meta property="og:type" content="website">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'azul-escuro': '#0C2D6B',
+            'azul-medio': '#1A4A9C',
+            'azul-noite': '#081437',
+            'dourado': '#C8A84B',
+            'dourado-claro': '#E8C96A',
+            'ciano': '#1B8FA8',
+            'ciano-claro': '#E8F6FA',
+            'cinza-claro': '#F8F9FF',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav id="navbar" class="navbar fixed top-0 w-full z-50 bg-azul-escuro">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 lg:h-20">
+        <a href="index.html" class="flex items-center"><img src="assets/images/logo.png" alt="IECH" class="h-10 lg:h-12"></a>
+        <div class="hidden lg:flex items-center space-x-6">
+          <a href="sobre.html" class="nav-link text-white text-sm font-medium hover:text-dourado">Sobre</a>
+          <a href="cursos.html" class="nav-link text-white text-sm font-medium hover:text-dourado">Cursos</a>
+          <a href="modalidades.html" class="nav-link text-white text-sm font-medium hover:text-dourado">Modalidades</a>
+          <a href="professores.html" class="nav-link text-white text-sm font-medium hover:text-dourado">Professores</a>
+          <a href="downloads.html" class="nav-link text-white text-sm font-medium hover:text-dourado">Downloads</a>
+          <span class="text-white/30">|</span>
+          <a href="https://institutoech.com.br/webmail" target="_blank" rel="noopener noreferrer" class="text-white/70 text-sm font-medium hover:text-white transition-colors">Webmail</a>
+          <a href="inscricao.html" class="btn-dourado text-sm !py-2 !px-5">Inscreva-se</a>
+        </div>
+        <button id="menu-btn" class="lg:hidden text-white" aria-label="Abrir menu"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="mobile-menu lg:hidden bg-azul-escuro border-t border-white/10">
+      <div class="px-4 py-4 space-y-3">
+        <a href="sobre.html" class="block text-white font-medium hover:text-dourado">Sobre</a>
+        <a href="cursos.html" class="block text-white font-medium hover:text-dourado">Cursos</a>
+        <a href="modalidades.html" class="block text-white font-medium hover:text-dourado">Modalidades</a>
+        <a href="professores.html" class="block text-white font-medium hover:text-dourado">Professores</a>
+        <a href="downloads.html" class="block text-white font-medium hover:text-dourado">Downloads</a>
+        <a href="https://institutoech.com.br/webmail" target="_blank" rel="noopener noreferrer" class="block text-white/70 font-medium hover:text-white">Webmail</a>
+        <a href="inscricao.html" class="btn-dourado text-center block text-sm">Inscreva-se</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ========== PAGE HERO ========== -->
+    <section class="page-hero">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <span class="pill mb-4" data-aos="fade-down">Aula Híbrida</span>
+        <h1 class="mt-3" data-aos="fade-up">Modalidades de Aula</h1>
+        <div class="gold-line" data-aos="fade-up" data-aos-delay="100"></div>
+        <p class="text-gray-300 mt-4 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="150">Todas as modalidades participam da mesma aula, com o mesmo professor, em tempo real.</p>
+      </div>
+    </section>
+
+    <!-- ========== DESTAQUE: NÃO É EAD ========== -->
+    <section class="py-12 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-wrap justify-center gap-6" data-aos="fade-up">
+          <div class="flex items-center gap-2 bg-red-50 text-red-700 font-semibold text-sm px-5 py-3 rounded-lg">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            Não é EAD
+          </div>
+          <div class="flex items-center gap-2 bg-red-50 text-red-700 font-semibold text-sm px-5 py-3 rounded-lg">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            Não são aulas gravadas
+          </div>
+          <div class="flex items-center gap-2 bg-green-50 text-green-700 font-semibold text-sm px-5 py-3 rounded-lg">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            Sempre ao vivo
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== EXPLICAÇÃO AULA HÍBRIDA ========== -->
+    <section class="py-16 section-alt">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white rounded-xl p-8 border border-gray-100" data-aos="fade-up">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 bg-ciano/10 rounded-lg flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-ciano" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-azul-escuro mb-3">Como Funciona a Aula Híbrida</h3>
+              <p class="text-gray-600 mb-4">
+                No IECH, as três modalidades de aula acontecem simultaneamente. O professor ministra a aula na sala presencial enquanto os seminaristas online ao vivo acompanham em tempo real pela transmissão.
+              </p>
+              <p class="text-gray-600">
+                Os seminaristas online participam ativamente — ouvem, fazem perguntas e interagem com o professor e os demais colegas, assim como os presenciais. É a mesma experiência de aprendizado, independentemente da modalidade escolhida.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 3 CARDS DETALHADOS ========== -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-14" data-aos="fade-up">
+          <h2 class="text-3xl lg:text-4xl font-bold text-azul-escuro">Escolha Sua Modalidade</h2>
+          <div class="gold-line mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid lg:grid-cols-3 gap-8">
+          <!-- Presencial -->
+          <div class="card-hover bg-white rounded-xl border-2 border-azul-escuro overflow-hidden" data-aos="fade-up">
+            <div class="bg-azul-escuro text-white p-6">
+              <svg class="w-10 h-10 text-dourado mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+              <h3 class="text-2xl font-bold">Presencial</h3>
+              <p class="text-white/70 mt-1">Betim/MG</p>
+            </div>
+            <div class="p-6">
+              <div class="space-y-3 mb-6">
+                <div class="flex items-center gap-2 text-sm text-gray-600">
+                  <svg class="w-4 h-4 text-dourado flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  Manhã e Noite — Seg a Sex
+                </div>
+                <div class="flex items-center gap-2 text-sm text-gray-600">
+                  <svg class="w-4 h-4 text-dourado flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                  Rua Joaquim Bonifácio, 816 — Jd. Alterosa
+                </div>
+                <div class="flex items-center gap-2 text-sm text-gray-600">
+                  <svg class="w-4 h-4 text-dourado flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                  Interação direta com professores
+                </div>
+                <div class="flex items-center gap-2 text-sm text-gray-600">
+                  <svg class="w-4 h-4 text-dourado flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                  Convivência com outros seminaristas
+                </div>
+                <div class="flex items-center gap-2 text-sm text-gray-600">
+                  <svg class="w-4 h-4 text-dourado flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                  Material didático próprio do IECH
+                </div>
+              </div>
+              <a href="inscricao.html" class="btn-dourado w-full text-center block">Inscreva-se</a>
+            </div>
+          </div>
+
+          <!-- Online Manhã -->
+          <div class="card-hover bg-white rounded-xl border-2 border-ciano overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+            <div class="bg-ciano text-white p-6">
+              <svg class="w-10 h-10 text-white mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              <h3 class="text-2xl font-bold">Online ao Vivo — Manhã</h3>
+              <p class="text-white/70 mt-1">De qualquer lugar</p>
+            </div>
+            <div class="p-6">
+              <div class="space-y-3 mb-6">
+                <div class="flex items-center gap-2 text-sm text-gray-600">
+                  <svg class="w-4 h-4 text-dourado flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  08h00 às 11h40 — Seg a Sex
+                </div>
+                <div class="flex items-center gap-2 text-sm text-gray-600">
+                  <svg class="w-4 h-4 text-dourado flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                  Transmissão ao vivo em tempo real
+                </div>
+                <div class="flex items-center gap-2 text-sm text-gray-600">
+                  <svg class="w-4 h-4 text-dourado flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                  Participe de qualquer lugar do Brasil
+                </div>
+                <div class="flex items-center gap-2 text-sm text-gray-600">
+                  <svg class="w-4 h-4 text-dourado flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                  Faça perguntas em tempo real
+                </div>
+                <div class="flex items-center gap-2 text-sm text-gray-600">
+                  <svg class="w-4 h-4 text-dourado flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                  Mesma aula dos presenciais
+                </div>
+              </div>
+              <a href="inscricao.html" class="btn-dourado w-full text-center block">Inscreva-se</a>
+            </div>
+          </div>
+
+          <!-- Online Noite -->
+          <div class="card-hover bg-white rounded-xl border-2 border-dourado overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+            <div class="bg-azul-noite text-white p-6">
+              <svg class="w-10 h-10 text-dourado mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+              <h3 class="text-2xl font-bold">Online ao Vivo — Noite</h3>
+              <p class="text-white/70 mt-1">Ideal para quem trabalha</p>
+            </div>
+            <div class="p-6">
+              <div class="space-y-3 mb-6">
+                <div class="flex items-center gap-2 text-sm text-gray-600">
+                  <svg class="w-4 h-4 text-dourado flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  19h30 às 21h30 — Seg a Sex
+                </div>
+                <div class="flex items-center gap-2 text-sm text-gray-600">
+                  <svg class="w-4 h-4 text-dourado flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                  Transmissão ao vivo em tempo real
+                </div>
+                <div class="flex items-center gap-2 text-sm text-gray-600">
+                  <svg class="w-4 h-4 text-dourado flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                  Compatível com jornada de trabalho
+                </div>
+                <div class="flex items-center gap-2 text-sm text-gray-600">
+                  <svg class="w-4 h-4 text-dourado flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                  Interação com professor e colegas
+                </div>
+                <div class="flex items-center gap-2 text-sm text-gray-600">
+                  <svg class="w-4 h-4 text-dourado flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                  Mesma qualidade de ensino
+                </div>
+              </div>
+              <a href="inscricao.html" class="btn-dourado w-full text-center block">Inscreva-se</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== TABELA COMPARATIVA ========== -->
+    <section class="py-16 section-alt">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-10" data-aos="fade-up">
+          <h2 class="text-2xl lg:text-3xl font-bold text-azul-escuro">Comparativo das Modalidades</h2>
+          <div class="gold-line mx-auto mt-4"></div>
+        </div>
+
+        <div class="overflow-x-auto" data-aos="fade-up">
+          <table class="compare-table w-full bg-white rounded-xl overflow-hidden border border-gray-200">
+            <thead>
+              <tr>
+                <th class="text-left px-6 py-4 text-sm">Característica</th>
+                <th class="text-center px-6 py-4 text-sm">Presencial</th>
+                <th class="text-center px-6 py-4 text-sm">Online Manhã</th>
+                <th class="text-center px-6 py-4 text-sm">Online Noite</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="px-6 py-4 text-sm text-gray-700">Horário</td>
+                <td class="px-6 py-4 text-sm text-gray-600 text-center">Manhã e Noite</td>
+                <td class="px-6 py-4 text-sm text-gray-600 text-center">08h00–11h40</td>
+                <td class="px-6 py-4 text-sm text-gray-600 text-center">19h30–21h30</td>
+              </tr>
+              <tr class="bg-gray-50">
+                <td class="px-6 py-4 text-sm text-gray-700">Dias</td>
+                <td class="px-6 py-4 text-sm text-gray-600 text-center">Seg a Sex</td>
+                <td class="px-6 py-4 text-sm text-gray-600 text-center">Seg a Sex</td>
+                <td class="px-6 py-4 text-sm text-gray-600 text-center">Seg a Sex</td>
+              </tr>
+              <tr>
+                <td class="px-6 py-4 text-sm text-gray-700">Ao vivo</td>
+                <td class="px-6 py-4 text-center"><svg class="w-5 h-5 text-green-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></td>
+                <td class="px-6 py-4 text-center"><svg class="w-5 h-5 text-green-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></td>
+                <td class="px-6 py-4 text-center"><svg class="w-5 h-5 text-green-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></td>
+              </tr>
+              <tr class="bg-gray-50">
+                <td class="px-6 py-4 text-sm text-gray-700">Interação com professor</td>
+                <td class="px-6 py-4 text-center"><svg class="w-5 h-5 text-green-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></td>
+                <td class="px-6 py-4 text-center"><svg class="w-5 h-5 text-green-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></td>
+                <td class="px-6 py-4 text-center"><svg class="w-5 h-5 text-green-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></td>
+              </tr>
+              <tr>
+                <td class="px-6 py-4 text-sm text-gray-700">Material didático</td>
+                <td class="px-6 py-4 text-center"><svg class="w-5 h-5 text-green-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></td>
+                <td class="px-6 py-4 text-center"><svg class="w-5 h-5 text-green-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></td>
+                <td class="px-6 py-4 text-center"><svg class="w-5 h-5 text-green-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></td>
+              </tr>
+              <tr class="bg-gray-50">
+                <td class="px-6 py-4 text-sm text-gray-700 font-semibold">Custo</td>
+                <td class="px-6 py-4 text-center text-sm font-bold text-dourado">Gratuito</td>
+                <td class="px-6 py-4 text-center text-sm font-bold text-dourado">Gratuito</td>
+                <td class="px-6 py-4 text-center text-sm font-bold text-dourado">Gratuito</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== MAPA ========== -->
+    <section class="py-16 bg-white">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-10" data-aos="fade-up">
+          <h2 class="text-2xl lg:text-3xl font-bold text-azul-escuro">Nossa Localização</h2>
+          <div class="gold-line mx-auto mt-4"></div>
+          <p class="text-gray-600 mt-4">Para seminaristas da modalidade presencial</p>
+        </div>
+        <div class="rounded-xl overflow-hidden border border-gray-200" data-aos="fade-up">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3751.5!2d-44.17!3d-19.96!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDU3JzM2LjAiUyA0NMKwMTAnMTIuMCJX!5e0!3m2!1spt-BR!2sbr!4v1" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Localização IECH - Betim/MG"></iframe>
+        </div>
+        <p class="text-center text-gray-500 text-sm mt-4">Rua Joaquim Bonifácio, 816 · Jd. Alterosa · Betim/MG</p>
+      </div>
+    </section>
+
+    <!-- ========== CTA FINAL ========== -->
+    <section class="py-20 bg-azul-noite">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
+        <h2 class="text-3xl lg:text-4xl font-bold text-white mb-4">Escolha Sua Modalidade e Comece</h2>
+        <div class="gold-line mx-auto mt-2 mb-6"></div>
+        <p class="text-gray-300 text-lg mb-8">Inscreva-se gratuitamente e comece sua formação teológica no IECH.</p>
+        <a href="inscricao.html" class="btn-dourado text-lg">Inscreva-se Gratuitamente</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="bg-azul-noite border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid md:grid-cols-3 gap-10">
+        <div>
+          <img src="assets/images/logo.png" alt="IECH" class="h-10 mb-4">
+          <p class="text-gray-400 text-sm leading-relaxed">Instituto Evangelístico Charley Huffman — formando seminaristas para o ministério com educação teológica gratuita e de qualidade desde 2010.</p>
+          <div class="mt-4 space-y-1">
+            <p class="text-gray-400 text-sm"><svg class="inline w-4 h-4 mr-1 text-dourado" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>institutoech@gmail.com</p>
+            <p class="text-gray-400 text-sm"><svg class="inline w-4 h-4 mr-1 text-dourado" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>(31) 4127-3345</p>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4" style="font-family: Inter, sans-serif;">Páginas</h4>
+          <ul class="space-y-2">
+            <li><a href="sobre.html" class="text-gray-400 text-sm hover:text-dourado">Sobre o IECH</a></li>
+            <li><a href="cursos.html" class="text-gray-400 text-sm hover:text-dourado">Cursos</a></li>
+            <li><a href="modalidades.html" class="text-gray-400 text-sm hover:text-dourado">Modalidades</a></li>
+            <li><a href="professores.html" class="text-gray-400 text-sm hover:text-dourado">Professores</a></li>
+            <li><a href="downloads.html" class="text-gray-400 text-sm hover:text-dourado">Downloads</a></li>
+            <li><a href="inscricao.html" class="text-gray-400 text-sm hover:text-dourado">Inscrição</a></li>
+            <li><a href="https://institutoech.com.br/webmail" target="_blank" rel="noopener noreferrer" class="text-gray-400 text-sm hover:text-dourado">Webmail</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4" style="font-family: Inter, sans-serif;">Localização e Horários</h4>
+          <div class="space-y-3">
+            <p class="text-gray-400 text-sm"><svg class="inline w-4 h-4 mr-1 text-dourado" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>Rua Joaquim Bonifácio, 816 · Jd. Alterosa · Betim/MG</p>
+            <p class="text-gray-400 text-sm"><svg class="inline w-4 h-4 mr-1 text-dourado" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Online ao vivo — Manhã: Seg a Sex · 08h00–11h40</p>
+            <p class="text-gray-400 text-sm"><svg class="inline w-4 h-4 mr-1 text-dourado" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Online ao vivo — Noite: Seg a Sex · 19h30–21h30</p>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-white/10 mt-10 pt-6 text-center">
+        <p class="text-gray-500 text-sm">© 2025 Instituto Evangelístico Charley Huffman — IECH. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
